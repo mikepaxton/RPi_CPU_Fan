@@ -1,0 +1,10 @@
+Using a PNP 2222 i've added a cpu fan to my Raspberry Pi servers.
+
+The cpufan.py python script reads the cpu temp every 10 seconds (configurable) and if has exceeded the MAX temp
+(also configurable) turns the fan on.
+
+The fan used is a 5 volt cpu fan purchased from Amazon which can run directly off of the 5 volt GPIO pins of the
+Raspberry Pi.
+
+By using a PNP 2222 transistor I'm able to turn the fan on and off using Pin 18 (configurable) with the python script.
+I'm using /etc/rc.local to execute the script at system boot.
